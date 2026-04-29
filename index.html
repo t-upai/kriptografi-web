@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Tool</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <h1><i class="fa-solid fa-shield-halved"></i> Crypto Tool</h1>
+        <p>Caesar Cipher Encryption</p>
+    </div>
+
+    <div class="grid">
+
+        <!-- INPUT -->
+        <div class="card">
+            <h2><i class="fa-solid fa-pen"></i> Input</h2>
+
+            <textarea id="inputText" placeholder="Masukkan teks..."></textarea>
+
+            <input type="number" id="shift" placeholder="Shift (contoh: 3)">
+
+            <div class="btn-group">
+                <button class="encrypt" onclick="encrypt()">
+                    <i class="fa-solid fa-lock"></i>
+                </button>
+
+                <button class="decrypt" onclick="decrypt()">
+                    <i class="fa-solid fa-unlock"></i>
+                </button>
+
+                <button class="reset" onclick="resetAll()">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="card">
+            <h2><i class="fa-solid fa-terminal"></i> Output</h2>
+
+            <div class="output" id="outputText">
+                Hasil akan muncul di sini...
+            </div>
+
+            <button class="copy" onclick="copyResult()">
+                <i class="fa-solid fa-copy"></i> Copy
+            </button>
+
+            <div class="info">
+                <span id="charCount">0 karakter</span>
+                <span id="shiftInfo">Shift: 0</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="toast">Copied!</div>
+
+<script src="script.js"></script>
+</body>
+</html>
